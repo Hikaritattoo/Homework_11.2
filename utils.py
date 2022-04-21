@@ -13,8 +13,8 @@ def get_candidate(candidate_id):
         if candidate['id'] == candidate_id:
             return {
                 'name': candidate['name'],
-                'position': candidate['position'],
                 'picture': candidate['picture'],
+                'position': candidate['position'],
                 'skills': candidate['skills'],
             }
     return {'not_found': 'Я устал, я ухожу'}
