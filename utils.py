@@ -17,7 +17,7 @@ def get_candidate(candidate_id):
                 'position': candidate['position'],
                 'skills': candidate['skills'],
             }
-    return {'not_found': 'Я устал, я ухожу'}
+    return {'not_found': 'Ушел на обед'}
 
 
 def get_candidates_by_name(candidate_name):
