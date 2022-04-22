@@ -5,9 +5,13 @@
     <title>Skill</title>
 </head>
 <body>
-    <h1>Найдено скилловых по {{ skill }}: {{ candidates_len }}</h1>
-    {% for candidate in candidates %}
-        <p><a href="/candidate/{{ candidate.id }}">{{ candidate.name }}</a></p>
-    {% endfor %}
+    {% if candidates|length > 1 %}
+        <h1>Найдено скилловых по {{ skill }}: {{ candidates_len }}</h1>
+        {% for candidate in candidates %}
+            <p><a href="/candidate/{{ candidate.id }}">{{ candidate.name }}</a></p>
+        {% endfor %}
+    {% else %}
+        <h1>Кандидатов нет</h1>
+    {% endif %}   
 </body>
 </html>
